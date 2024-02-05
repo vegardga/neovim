@@ -1,8 +1,15 @@
 return {
+  {
+    "hrsh7th/cmp-nvim-lsp",
+  },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
     "L3MON4D3/LuaSnip",
+    dependencies = {
+      "saadparwaiz1/cmp_luasnip",
+      "rafamadriz/friendly-snippets",
+    },
     keys = function()
       return {}
     end,
