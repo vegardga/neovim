@@ -31,6 +31,8 @@ return {
       local luasnip = require("luasnip")
       local cmp = require("cmp")
 
+      require("luasnip.loaders.from_vscode").load({ paths = "./snippets" })
+
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then

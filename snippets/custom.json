@@ -1,0 +1,14 @@
+{
+  "markdown command": {
+    "prefix": "mdc",
+    "body": [
+      "${1:first}",
+      "",
+      "```",
+      "${2:second}",
+      "```",
+      ""
+    ],
+    "description": "New markdown command section"
+  }
+}
