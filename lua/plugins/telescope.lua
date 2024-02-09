@@ -2,6 +2,9 @@ return {
   -- change some telescope options and a keymap to browse plugin files
   {
     "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
     keys = {
       -- add a keymap to browse plugin files
       -- stylua: ignore
@@ -9,6 +12,13 @@ return {
         "<leader>fp",
         function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
         desc = "Find Plugin File",
+      },
+      {
+        "<leader>fg",
+        function()
+          require("telescope.builtin").live_grep({ cwd = require("lazy.core.config").options.root })
+        end,
+        desc = "Live grep",
       },
     },
     -- change some options
