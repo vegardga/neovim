@@ -1,32 +1,33 @@
-return {
-  "nvim-neo-tree/neo-tree.nvim",
-  lazy = false,
-  branch = "v3.x",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    "MunifTanjim/nui.nvim",
-    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-  },
-  config = function()
-    require("neo-tree").setup({
-      filesystem = {
-        bind_to_cwd = false,
-        follow_current_file = { enabled = false },
-        filtered_items = {
-          visible = true,
-          show_hidden_count = true,
-          hide_dotfiles = false,
-          hide_gitignored = true,
-          hide_by_name = {
-            -- '.git',
-            -- '.DS_Store',
-            -- 'thumbs.db',
-          },
-          never_show = {},
-        },
-      },
-    })
-    vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left toggle<CR>", {})
-  end,
-}
+return {}
+--   return {}
+--   "nvim-neo-tree/neo-tree.nvim",
+--   lazy = false,
+--   branch = "v3.x",
+--   dependencies = {
+--     "nvim-lua/plenary.nvim",
+--     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+--     "MunifTanjim/nui.nvim",
+--     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+--   },
+--   config = function()
+--     require("neo-tree").setup({
+--       filesystem = {
+--         bind_to_cwd = false,
+--         follow_current_file = { enabled = false },
+--         filtered_items = {
+--           visible = true,
+--           show_hidden_count = true,
+--           hide_dotfiles = false,
+--           hide_gitignored = true,
+--           hide_by_name = {
+--             -- '.git',
+--             -- '.DS_Store',
+--             -- 'thumbs.db',
+--           },
+--           never_show = {},
+--         },
+--       },
+--     })
+--     vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left toggle<CR>", {})
+--   end,
+-- }
