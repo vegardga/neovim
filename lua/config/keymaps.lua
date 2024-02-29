@@ -10,3 +10,5 @@ end, { desc = "Terminal (root)" })
 vim.keymap.set("n", "<leader>fT", function()
   Util.terminal(nil, { border = "rounded" })
 end, { desc = "Terminal (cwd)" })
+
+vim.keymap.set("n", "<leader>co", ":!open .<CR>", { desc = "Open in Finder" })
